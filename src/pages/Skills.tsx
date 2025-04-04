@@ -7,7 +7,7 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { SiTypescript, SiSequelize, SiJavascript } from 'react-icons/si';
 import ScrollReveal from '../components/ScrollReveal'; 
 import { useTranslation } from 'react-i18next';
-import sear from '../assets/cwe.png'
+import sear from '../assets/cweee.png'
 
 export default function Skills() {
   const { t } = useTranslation("translation", { keyPrefix: "pages.skills" });

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { FaGithub, FaLinkedin, FaTelegram } from 'react-icons/fa';
 import { Trans, useTranslation } from 'react-i18next';
 import ActionButton from '../components/ActionButton';
-import fuaImage from '../assets/hol.png';
+import fuaImage from '../assets/ho.png';
 
 export default function HomePage() {
     const [loaded, setLoaded] = useState(false);
