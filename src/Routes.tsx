@@ -1,6 +1,5 @@
 import { Outlet, Route, Routes } from 'react-router';
-import App from './App';
-import NotFound from './pages/NotFound';
+
 
 
 

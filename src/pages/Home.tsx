@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { FaGithub, FaLinkedin, FaTelegram } from 'react-icons/fa';
-import { Link } from 'react-router';
 import { Trans, useTranslation } from 'react-i18next';
+import ActionButton from '../components/ActionButton';
 
 export default function HomePage() {
     const [loaded, setLoaded] = useState(false);
@@ -17,6 +17,16 @@ export default function HomePage() {
         { icon: <FaLinkedin />, delay: 2 },
     ];
 
+    const scrollToContact = () => {
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+            contactSection.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    };
+
     return (
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col md:flex-row items-center w-full gap-8">
@@ -31,7 +41,6 @@ export default function HomePage() {
                                 components={{
                                     1: <span className="text-text-secondary" />
                                 }}
-                              
                             />
                         </h1>
                         <p className="text-sm md:text-base mb-8">
@@ -63,18 +72,13 @@ export default function HomePage() {
                             </a>
                         ))}
                         
-                        <Link 
-                            to="/contact" 
-                            className={`bg-text-secondary text-[#1F252E] font-medium py-2 px-4 rounded-lg
-                                hover:bg-opacity-90 hover:shadow-[0_0_15px_#00E8F8] transition-all duration-300
-                                ${loaded ? 'animate-navani' : 'opacity-0'}`}
-                            style={{
-                                animationDelay: '400ms',
-                                animationFillMode: 'forwards'
-                            }}
-                        >
-                            {t('contact_button')}
-                        </Link>
+                        <ActionButton
+                            onClick={scrollToContact}
+                            text={t('contact_button')}
+                            color="primary"
+                            animate={loaded}
+                            animationDelay="400ms"
+                        />
                     </div>
                 </div>
 

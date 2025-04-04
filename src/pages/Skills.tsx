@@ -4,12 +4,13 @@ import {
 } from 'react-icons/fa';
 import { BsBootstrapFill } from "react-icons/bs";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiTypescript, SiSequelize, SiJavascript} from 'react-icons/si';
+import { SiTypescript, SiSequelize, SiJavascript } from 'react-icons/si';
 import ScrollReveal from '../components/ScrollReveal'; 
-import {  useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next';
 
 export default function Skills() {
   const { t } = useTranslation("translation", { keyPrefix: "pages.skills" });
+  
   const techCategories = [
     {
       title: "Frontend",
@@ -28,7 +29,19 @@ export default function Skills() {
         { name: "Node.js", level: 63, icon: <FaNodeJs className="text-2xl text-[#68A063]" /> },
         { name: "JavaScript", level: 65, icon: <SiJavascript className="text-2xl text-[#F7DF1E]" /> },
         { name: "TypeScript", level: 50, icon: <SiTypescript className="text-2xl text-[#3178C6]" /> },
-        { name: "C#", level: 50 },
+        { 
+          name: "C#", 
+  level: 50, 
+  icon: (
+    <div className=" flex items-center justify-center"> 
+      <img 
+        src="/cwe.png" 
+        alt="C#"
+        className="w-12 h-12 object-contain"  
+      />
+    </div>
+          )
+        },
       ]
     },
     {
@@ -44,7 +57,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-[#0F172A] text-white">
+    <section id="skills" className="py-16 px-4 sm:px-6 lg:px-8  text-white">
       <div className="max-w-5xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-16">
@@ -52,7 +65,7 @@ export default function Skills() {
               <span className="text-text-primary">{t('title')}</span> 
             </h2>
             <p className="max-w-2xl mx-auto text-lg text-[#94A3B8]">
-            {t('description')}
+              {t('description')}
             </p>
           </div>
         </ScrollReveal>
@@ -65,7 +78,7 @@ export default function Skills() {
               className="h-full" 
             >
               <div 
-                className="bg-[#1E293B] rounded-xl p-6 border border-[#334155] hover:border-[#38BDF8] transition-all duration-300 shadow-lg hover:shadow-xl h-full"
+                className="bg-main-secondary rounded-xl p-6 border border-[#334155] hover:border-[#38BDF8] transition-all duration-300 shadow-lg hover:shadow-xl h-full"
               >
                 <div className="flex items-center mb-4">
                   <div className="mr-3">
@@ -79,18 +92,19 @@ export default function Skills() {
                     <ScrollReveal key={skillIndex} delay={100 + skillIndex * 50}>
                       <div>
                         <div className="flex justify-between items-center mb-2">
-                          <span className="font-medium text-[#CBD5E1]">
+                          <span className="font-medium text-[#CBD5E1] flex items-center">
                             {skill.icon ? (
-                              <span className="flex items-center">
-                                {skill.icon} <span className="ml-2">{skill.name}</span>
-                              </span>
+                              <>
+                                {skill.icon}
+                                <span className="ml-2">{skill.name}</span>
+                              </>
                             ) : (
-                              <span className="flex items-center">
+                              <>
                                 <span className="w-8 h-8 flex items-center justify-center mr-2">
                                   <span className="w-6 h-6 rounded-full bg-[#334155]"></span>
                                 </span>
                                 {skill.name}
-                              </span>
+                              </>
                             )}
                           </span>
                           {skill.level && <span className="text-sm text-[#38BDF8]">{skill.level}%</span>}
