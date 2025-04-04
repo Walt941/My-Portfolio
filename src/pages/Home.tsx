@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { FaGithub, FaLinkedin, FaTelegram } from 'react-icons/fa';
 import { Trans, useTranslation } from 'react-i18next';
 import ActionButton from '../components/ActionButton';
+import fuaImage from '../assets/hol.png';
 
 export default function HomePage() {
     const [loaded, setLoaded] = useState(false);
@@ -28,9 +29,9 @@ export default function HomePage() {
     };
 
     return (
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 md:pt-0">
             <div className="flex flex-col md:flex-row items-center w-full gap-8">
-                <div className="flex-1 text-white max-w-2xl">
+                <div className="flex-1 text-white max-w-2xl mt-8 md:mt-0">
                     <div className='animate-left-to-right'>
                         <h1 className="text-2xl mb-2">
                             <span>{t('hola')}</span>
@@ -84,7 +85,7 @@ export default function HomePage() {
 
                 <div className="flex-1 hidden md:block">
                     <img
-                        src="/fua.png" 
+                       src={fuaImage}
                         alt="Walter"
                         className="object-cover w-full animate-right-to-left h-auto max-h-100 rounded-lg"
                     />

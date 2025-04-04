@@ -40,7 +40,7 @@ export default function About() {
 
     return (
         <section id="about" className="min-h-screen px-4 sm:px-6 lg:px-8 bg-main-primary text-white">
-            <div className="max-w-4xl mx-auto py-16">
+            <div className="max-w-4xl mx-auto py-12 md:py-16 lg:py-12">
                 <ScrollReveal className="w-full">
                     <div className="text-center mb-16 animate-fade-in">
                         <h2 className="text-3xl md:text-4xl font-bold mb-4">

@@ -5,5 +5,5 @@ export default {
     skills: "Skills",
     projects: "Projects",
     contact: "Contact",
-    next_language: "Español"
+    next_language: "English"
 } as const;

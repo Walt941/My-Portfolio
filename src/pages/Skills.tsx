@@ -7,6 +7,7 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { SiTypescript, SiSequelize, SiJavascript } from 'react-icons/si';
 import ScrollReveal from '../components/ScrollReveal'; 
 import { useTranslation } from 'react-i18next';
+import sear from '../assets/cwe.png'
 
 export default function Skills() {
   const { t } = useTranslation("translation", { keyPrefix: "pages.skills" });
@@ -35,7 +36,7 @@ export default function Skills() {
   icon: (
     <div className=" flex items-center justify-center"> 
       <img 
-        src="/cwe.png" 
+        src={sear } 
         alt="C#"
         className="w-12 h-12 object-contain"  
       />

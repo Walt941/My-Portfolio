@@ -3,6 +3,12 @@ import { FaGithub } from 'react-icons/fa';
 import ScrollReveal from '../components/ScrollReveal';
 import { Trans, useTranslation } from 'react-i18next';
 import ActionButton from '../components/ActionButton';
+import ecommerceImg from '../assets/E-commerce.avif';
+import taskappImg from '../assets/Task Management App.avif';
+import social from '../assets/socialMedia.avif';
+import fitness from '../assets/fitness.avif';
+import food from '../assets/food.avif';
+import typing from '../assets/Typing.avif'
 
 export default function Projects() {
   const { t } = useTranslation("translation", { keyPrefix: "pages.projects" });
@@ -14,15 +20,14 @@ export default function Projects() {
       description: t('description_card1'),
       tags: ["React", "Node.js", "JavaScript", "Zustand"],
       githubUrl: "https://github.com/username/ecommerce",
-      image: "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+      image: ecommerceImg
     },
     {
       title: t('title_card2'),
       description: t('description_card2'),
       tags: ["TypeScript", "React", "Vite", "Tailwind"],
       githubUrl: "https://github.com/username/taskapp",
-      demoUrl: "https://taskapp-demo.com",
-      image: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+      image: taskappImg
     },
     {
       title: t('title_card3'),
@@ -30,7 +35,7 @@ export default function Projects() {
       tags: ["TypeScript", "Sequelize", "PostgreSQL"],
       githubUrl: "https://github.com/username/dashboard",
       demoUrl: "https://dashboard-demo.com",
-      image: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+      image: social
     },
     {
       title: t('title_card4'),
@@ -38,7 +43,7 @@ export default function Projects() {
       tags: ["Vite", "TypeScript", "React","Tailwind"],
       githubUrl: "https://github.com/username/fitness-tracker",
       demoUrl: "https://fitnesstracker-demo.com",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+      image: fitness
     },
     {
       title: t('title_card5'),
@@ -46,7 +51,7 @@ export default function Projects() {
       tags: ["JavaScript", "Node.js", "PostgreSQL"],
       githubUrl: "https://github.com/username/recipe-finder",
       demoUrl: "https://recipefinder-demo.com",
-      image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+      image: food
     },
     {
       title: t('title_card6'),
@@ -54,7 +59,7 @@ export default function Projects() {
       tags: ["React", "Tailwind CSS", "TypeScript"],
       githubUrl: "https://github.com/username/portfolio",
       demoUrl: "https://myportfolio.com",
-      image: "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+      image: typing
     }
   ];
 

@@ -3,6 +3,7 @@ import { FiSend } from 'react-icons/fi';
 import ScrollReveal from '../components/ScrollReveal';
 import { Trans, useTranslation } from 'react-i18next';
 import { toast } from 'react-hot-toast';
+import contact from '../assets/fiu.png';
 
 export default function Contact() {
   const { t } = useTranslation("translation", { keyPrefix: "pages.contact" });
@@ -126,7 +127,7 @@ export default function Contact() {
             <ScrollReveal delay={200}>
               <div className="relative">
                 <img
-                  src="/fiu.png"  
+                  src={contact} 
                   alt="Contacto"
                   className="object-cover w-full h-auto max-h-[400px] rounded-lg animate-right-to-left" 
                 />

@@ -19,12 +19,12 @@ function App() {
         <Toaster />
         <Navbar />
         
-        <section id="home" className="py-20 min-h-screen">
+        <section id="home" className="py-12 md:py-20 ">
           <Home />
           <SectionDivider />
         </section>
         
-        <section id="about" className=" min-h-screen">
+        <section id="about" className="min-h-screen pb-8 lg:pb-12">
           <About />
           <SectionDivider />
         </section>
