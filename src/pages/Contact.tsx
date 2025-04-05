@@ -3,7 +3,7 @@ import { FiSend } from 'react-icons/fi';
 import ScrollReveal from '../components/ScrollReveal';
 import { Trans, useTranslation } from 'react-i18next';
 import { toast } from 'react-hot-toast';
-import contact from '../assets/fiu.png';
+import contact from '../assets/fiuuu.png';
 
 export default function Contact() {
   const { t } = useTranslation("translation", { keyPrefix: "pages.contact" });

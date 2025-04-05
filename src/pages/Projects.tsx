@@ -7,7 +7,7 @@ import ecommerceImg from '../assets/E-commerce.avif';
 import taskappImg from '../assets/Task Management App.avif';
 import social from '../assets/socialMedia.avif';
 import fitness from '../assets/fitness.avif';
-import food from '../assets/food.avif';
+import food from '../assets/receta.png';
 import typing from '../assets/Typing.avif'
 
 export default function Projects() {
