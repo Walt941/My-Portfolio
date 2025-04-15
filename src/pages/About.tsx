@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import ScrollReveal from '../components/ScrollReveal';
 import { Trans, useTranslation } from 'react-i18next';
 import ActionButton from '../components/ActionButton';
-import perfil from '../assets/prueba2.png';
+import perfil from '../assets/perfil.png';
 
 export default function About() {
     const { t } = useTranslation("translation", { keyPrefix: "pages.about" });

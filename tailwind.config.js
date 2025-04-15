@@ -20,7 +20,7 @@ export default {
       animation: {
         'right-to-left': 'right-to-left 1.5s ease forwards', 
         'left-to-right': 'left-to-right 1.5s ease forwards', 
-       'navani': 'navani 1s ease forwards',
+       'navani-fast': 'navani-fast 1s ease forwards',
        'fade-in': 'fadeIn 500ms ease-out forwards',
       },
       keyframes: {
@@ -33,8 +33,8 @@ export default {
           '0%': { transform: 'translateX(-100px)', opacity: '0' }, 
           '100%': { transform: 'translateX(0)', opacity: '1' }, 
         },
-        'navani': {
-          '0%': { transform: 'translateY(20px)', opacity: '0' },
+        'navani-fast': {
+          '0%': { transform: 'translateY(20px)', opacity: '0' }, 
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
         'fadeIn': {

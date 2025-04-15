@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
-import { FaGithub, FaLinkedin, FaTelegram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { CgMail } from "react-icons/cg";
 import { Trans, useTranslation } from 'react-i18next';
 import ActionButton from '../components/ActionButton';
-import fuaImage from '../assets/hola.png';
+import ImageHome from '../assets/imageHome.png';
 
 export default function HomePage() {
     const [loaded, setLoaded] = useState(false);
@@ -13,11 +14,22 @@ export default function HomePage() {
     }, []);
 
     const socialLinks = [
-        { icon: <FaGithub />, delay: 0 },
-        { icon: <FaTelegram />, delay: 1 },
-        { icon: <FaLinkedin />, delay: 2 },
+        { 
+            icon: <FaGithub />, 
+            delay: 1,
+            url: "https://github.com/Walt941"  
+        }, 
+        { 
+            icon: <CgMail />, 
+            delay: 2,
+            url: "mailto:walterbelloe@gmail.com"  
+        },
+        { 
+            icon: <FaLinkedin />, 
+            delay: 3,
+            url: "https://www.linkedin.com/in/walter-bello-951622359"  
+        },
     ];
-
     const scrollToContact = () => {
         const contactSection = document.getElementById('contact');
         if (contactSection) {
@@ -60,10 +72,12 @@ export default function HomePage() {
                         {socialLinks.map((link, index) => (
                             <a 
                                 key={index}
-                                href="#" 
+                                href={link.url}
+                                target="_blank"  
+                                rel="noopener noreferrer" 
                                 className={`text-text-secundary text-base sm:text-lg border border-[#00E8F8] rounded-full p-1 sm:p-2
                                     hover:bg-[#00E8F8] hover:text-[#1F252E] hover:shadow-[0_0_10px_#00E8F8] sm:hover:shadow-[0_0_20px_#00E8F8]
-                                    transition-all duration-300 ${loaded ? 'animate-navani' : 'opacity-0'}`}
+                                    transition-all duration-300 ${loaded ? 'animate-navani-fast' : 'opacity-0'}`}
                                 style={{
                                     animationDelay: `${link.delay * 100}ms`,
                                     animationFillMode: 'forwards'
@@ -88,7 +102,7 @@ export default function HomePage() {
 
                 <div className="flex-1 hidden md:block order-2">
                     <img
-                        src={fuaImage}
+                        src={ImageHome}
                         alt="Walter"
                         className="object-cover w-full animate-right-to-left h-auto max-h-100 rounded-lg"
                     />

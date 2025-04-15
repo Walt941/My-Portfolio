@@ -3,12 +3,8 @@ import { FaGithub } from 'react-icons/fa';
 import ScrollReveal from '../components/ScrollReveal';
 import { Trans, useTranslation } from 'react-i18next';
 import ActionButton from '../components/ActionButton';
-import ecommerceImg from '../assets/E-commerce.avif';
-import taskappImg from '../assets/Task Management App.avif';
-import social from '../assets/socialMedia.avif';
-import fitness from '../assets/fitness.avif';
-import food from '../assets/receta.png';
-import typing from '../assets/Typing.avif'
+import typing from '../assets/Typing.png';
+import time from '../assets/time.png'
 
 export default function Projects() {
   const { t } = useTranslation("translation", { keyPrefix: "pages.projects" });
@@ -18,56 +14,25 @@ export default function Projects() {
     {
       title: t('title_card1'),
       description: t('description_card1'),
-      tags: ["React", "Node.js", "JavaScript", "Zustand"],
-      githubUrl: "https://github.com/username/ecommerce",
-      image: ecommerceImg
+      tags: ["React","Vite", "Tailwind CSS", "TypeScript","Sequelize"],
+      frontendUrl: "https://github.com/Walt941/M_frontend",
+      backendUrl: "https://github.com/Walt941/M_backend",
+      image: typing
     },
     {
       title: t('title_card2'),
       description: t('description_card2'),
-      tags: ["TypeScript", "React", "Vite", "Tailwind"],
-      githubUrl: "https://github.com/username/taskapp",
-      image: taskappImg
-    },
-    {
-      title: t('title_card3'),
-      description: t('description_card3'),
-      tags: ["TypeScript", "Sequelize", "PostgreSQL"],
-      githubUrl: "https://github.com/username/dashboard",
-      demoUrl: "https://dashboard-demo.com",
-      image: social
-    },
-    {
-      title: t('title_card4'),
-      description: t('description_card4'),
-      tags: ["Vite", "TypeScript", "React","Tailwind"],
-      githubUrl: "https://github.com/username/fitness-tracker",
-      demoUrl: "https://fitnesstracker-demo.com",
-      image: fitness
-    },
-    {
-      title: t('title_card5'),
-      description: t('description_card5'),
-      tags: ["JavaScript", "Node.js", "PostgreSQL"],
-      githubUrl: "https://github.com/username/recipe-finder",
-      demoUrl: "https://recipefinder-demo.com",
-      image: food
-    },
-    {
-      title: t('title_card6'),
-      description: t('description_card6'),
-      tags: ["React", "Tailwind CSS", "TypeScript"],
-      githubUrl: "https://github.com/username/portfolio",
-      demoUrl: "https://myportfolio.com",
-      image: typing
+      tags: ["React","Vite", "Tailwind CSS", "TypeScript","Sequelize"],
+      frontendUrl: "https://github.com/Walt941/weather-frontend",
+      backendUrl: "https://github.com/Walt941/weather-backend",
+      image: time
     }
   ];
 
   const visibleProjects = showAll ? projects : projects.slice(0, 3);
-
   return (
     <section id="projects" className="py-16 px-4 sm:px-6 lg:px-8 bg-main-primary text-white">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <ScrollReveal>
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -84,14 +49,14 @@ export default function Projects() {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> 
+        <div className="flex flex-wrap justify-center gap-10 mb-6"> 
           {visibleProjects.map((project, index) => (
             <div 
               key={index}
-              className={`h-full ${showAll && index >= 3 ? 'animate-fade-in' : ''}`}
+              className={`w-full md:w-80 lg:w-96 ${showAll && index >= 3 ? 'animate-fade-in' : ''}`}
             >
               <ScrollReveal delay={index * 100} className="h-full">
-                <div className="bg-[#1E293B] rounded-xl overflow-hidden border border-[#334155] hover:border-[#38BDF8] transition-all duration-300 shadow-lg hover:shadow-xl h-full flex flex-col group">
+                <div className="bg-[#1E293B] rounded-xl overflow-hidden border border-[#334155] hover:border-[#38BDF8] transition-all duration-300 shadow-lg hover:shadow-xl h-full flex flex-col group min-h-[400px]">
                   <div className="h-48 overflow-hidden relative">
                     <img
                       src={project.image}
@@ -122,16 +87,28 @@ export default function Projects() {
                       </div>
                     </div>
 
-                    <div className="flex justify-between items-center mt-3 pt-3 border-t border-[#334155]"> 
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center text-text-secondary hover:text-[#38BDF8] transition-colors group/github text-sm" 
-                      >
-                        <FaGithub className="mr-2 group-hover/github:animate-bounce" />
-                        <span className="hover:underline">{t('code')}</span>
-                      </a>
+                    <div className="mt-auto pt-3 border-t border-[#334155]">
+                      <div className="flex flex-wrap gap-2">
+                        <a
+                          href={project.frontendUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center text-xs px-2 py-1 bg-[#334155]/80 rounded-full text-[#CBD5E1] hover:bg-[#38BDF8] hover:text-[#0F172A] transition-colors"
+                        >
+                          <FaGithub className="mr-1" />
+                          Frontend
+                        </a>
+                        
+                        <a
+                          href={project.backendUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center text-xs px-2 py-1 bg-[#334155]/80 rounded-full text-[#CBD5E1] hover:bg-[#38BDF8] hover:text-[#0F172A] transition-colors"
+                        >
+                          <FaGithub className="mr-1" />
+                          Backend
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>

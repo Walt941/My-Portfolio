@@ -39,7 +39,7 @@ const ActionButton: React.FC<ActionButtonProps> = ({
         transition-all duration-300
         ${fullWidth ? 'w-full' : ''}
         ${disabled ? 'opacity-50 cursor-not-allowed' : ''}
-        ${animate ? 'animate-navani opacity-0' : ''}
+        ${animate ? 'animate-navani-fast opacity-0' : ''}
         ${className}
       `}
       style={{

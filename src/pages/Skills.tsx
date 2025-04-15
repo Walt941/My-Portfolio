@@ -7,7 +7,7 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import { SiTypescript, SiSequelize, SiJavascript } from 'react-icons/si';
 import ScrollReveal from '../components/ScrollReveal'; 
 import { useTranslation } from 'react-i18next';
-import sear from '../assets/cwe.png'
+import sear from '../assets/imageSkill.png'
 
 export default function Skills() {
   const { t } = useTranslation("translation", { keyPrefix: "pages.skills" });
@@ -34,11 +34,11 @@ export default function Skills() {
           name: "C#", 
   level: 50, 
   icon: (
-    <div className=" flex items-center justify-center"> 
+    <div className=" flex items-center justify-center w-10 h-8"> 
       <img 
         src={sear } 
         alt="C#"
-        className="w-12 h-12 object-contain"  
+        className="w-full h-full  object-contain -my-1"  
       />
     </div>
           )
@@ -79,7 +79,7 @@ export default function Skills() {
               className="h-full" 
             >
               <div 
-                className="bg-main-secondary rounded-xl p-6 border border-[#334155] hover:border-[#38BDF8] transition-all duration-300 shadow-lg hover:shadow-xl h-full"
+                className="bg-main-secondary rounded-xl p-6 border border-[#334155]  transition-all duration-300 shadow-lg hover:shadow-xl h-full"
               >
                 <div className="flex items-center mb-4">
                   <div className="mr-3">
@@ -92,7 +92,7 @@ export default function Skills() {
                   {category.skills.map((skill, skillIndex) => (
                     <ScrollReveal key={skillIndex} delay={100 + skillIndex * 50}>
                       <div>
-                        <div className="flex justify-between items-center mb-2">
+                        <div className="flex justify-between items-center mb-1">
                           <span className="font-medium text-[#CBD5E1] flex items-center">
                             {skill.icon ? (
                               <>
